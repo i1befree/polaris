@@ -1,0 +1,59 @@
+
+
+$polaris-header-background-color: #333;
+$polaris-header-text-color: #fff;
+$polaris-header-text-shadow-color: null;
+$polaris-header-use-gradient: true;
+
+@if $theme-name == 'theme-neptune' or $theme-name == 'theme-neptune-touch' {
+  $polaris-header-background-color: #81af34;
+  $polaris-header-text-shadow-color: #4e691f;
+} @else if $theme-name == 'theme-classic' or $theme-name == 'theme-gray' {
+  $polaris-header-background-color: darken($base-color, 55%);
+} @else if $theme-name == 'theme-crisp' or $theme-name == 'theme-crisp-touch' {
+  $polaris-header-background-color: #2a3f5d;
+  $polaris-header-use-gradient: false;
+} @else if $theme-name == 'theme-triton' {
+  $polaris-header-background-color: #28384a;
+  $polaris-header-use-gradient: false;
+}
+
+#app-header {
+  background-color: $polaris-header-background-color;
+  @if $polaris-header-use-gradient {
+    @include background-image(linear-gradient(top, lighten($polaris-header-background-color, 5), darken($polaris-header-background-color, 5)));
+  }
+  border-bottom: 1px solid darken($polaris-header-background-color, 15);
+
+  @if $theme-name == 'theme-neptune' {
+    .#{$prefix}nlg & {
+      background-image: url(get-resource-path('images/header-bg.png', 'toolkit'));
+    }
+  }
+}
+
+#app-header-title {
+  padding: 15px 0 10px 0;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  @if $polaris-header-text-shadow-color != null {
+    text-shadow: 0 1px 0 $polaris-header-text-shadow-color;
+  }
+}
+
+#app-logo {
+  width: 40px;
+  height: 25px;
+
+  background: url(get-resource-path('images/logo.png', 'toolkit')) no-repeat center 4px;
+}
+
+.ks-profile-switcher {
+  margin: 0 15px;
+  cursor: pointer;
+  background-image: url(get-resource-path('images/options.png', 'toolkit'));
+  width: 22px;
+  height: 22px;
+}
