@@ -1,0 +1,29 @@
+{
+  "schema": [
+    {
+      "fieldName": "Lot Id",
+      "fieldType": "string",
+      "useColumn": true
+    },
+    {
+      "fieldName": "Subject",
+      "fieldType": "string",
+      "useColumn": true
+    },
+    {
+      "fieldName": "TOOLDATA HDR",
+      "fieldType": "string",
+      "useColumn": true
+    },
+    {
+      "fieldName": "TIME_STAMP",
+      "fieldType": "timestamp",
+      "useColumn": true
+    },
+    {
+      "fieldName": "RECPID",
+      "fieldType": "string",
+      "useColumn": true
+    }
+  ]
+}

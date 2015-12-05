@@ -1,0 +1,12 @@
+{
+  "logformat": [
+    {
+      "formatName": "Fdc Parser",
+      "formatId": "fdc-log"
+    },
+    {
+      "formatName": "CSV Parser",
+      "formatId": "csv-log"
+    }
+  ]
+}

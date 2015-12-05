@@ -4,6 +4,7 @@ Ext.define('Polaris.Application', {
 
     requires: [
         'Ext.app.*',
+		'Ext.layout.*',
         'Ext.state.CookieProvider',
         'Ext.window.MessageBox',
         'Ext.tip.QuickTipManager',
